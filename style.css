@@ -1,0 +1,93 @@
+body {
+    background-image: linear-gradient(249deg, #ffeb3b, #00bcd4, transparent);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    color: white;
+    font-size: 22px;
+    padding: 10px;
+}
+
+span:hover {
+    background: white;
+    color: black;
+}
+
+.content {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.row-border {
+    border-radius: 25px;
+    border: 2px solid black;
+    padding: 5px;
+    padding-top: 10px;
+    background-image: linear-gradient(#f9fbe7, #00bcd4, #4caf50);
+}
+
+.fotter {
+    background: gray;
+    text-align: center;
+    font-size: 22px;
+}
+
+@media screen and (min-width: 426px) {
+    .image_content {
+        max-width: 200px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .menu {
+        display: none;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .image_content img {
+        width: 100%;
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+        -webkit-transform: translatey(0);
+        -ms-transform: translatey(0);
+        transform: translatey(0);
+    }
+    60% {
+        -webkit-transform: translatey(-25px);
+        -ms-transform: translatey(-25px);
+        transform: translatey(-25px);
+    }
+    45% {
+        -webkit-transform: translatey(-45px);
+        -ms-transform: translatey(-45px);
+        transform: translatey(-45px);
+    }
+}
+
+.row:hover {
+    animation-name: bounce;
+    -moz-animation-name: bounce;
+}
+
+.row {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
